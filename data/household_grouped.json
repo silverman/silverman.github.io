@@ -7,7 +7,7 @@
         "size": "normal",
         "price": "150.0",
         "original_price": "€250 secondhand",
-        "quantity": "1",
+        "quantity": "0",
         "photo": "assets/images/image_row4_image21.jpg",
         "description_md": "- 7 speed internal shifting hub\n- Rear tube and tire replaced in 2026\n- Some paint has been repainted\n- Two chain locks included"
       }
@@ -45,7 +45,7 @@
       },
       {
         "name": "table, coffee or side",
-        "size": "",
+        "size": "950x460x430",
         "price": "10.0",
         "original_price": "priceless",
         "quantity": "2",
@@ -54,10 +54,10 @@
       },
       {
         "name": "table, bedside",
-        "size": "",
+        "size": "approx 400x400x450",
         "price": "5.0",
         "original_price": "priceless",
-        "quantity": "2",
+        "quantity": "0",
         "photo": "assets/images/image_row10_image23.jpg",
         "description_md": "- Solid unfinished fir\n- Can be disassembled in a pinch"
       },
