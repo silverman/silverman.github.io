@@ -1,0 +1,34 @@
+/* Small helpers for product cards */
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .card-img-top {
+    height: 250px;
+  }
+}
+
+.card-title {
+  font-size: 1.05rem;
+}
+
+.badge {
+  font-size: .9rem;
+}
+
+/* Make the price area stand out */
+.card-body .text-success {
+  font-size: 1.05rem;
+}
+
+/* Modal image sizing: keep natural aspect, constrained to viewport */
+.modal-dialog-centered .modal-body img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 160px);
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}

@@ -1,0 +1,391 @@
+[
+  {
+    "category": "transportation",
+    "items": [
+      {
+        "name": "damenfiets",
+        "size": "normal",
+        "price": "150.0",
+        "original_price": "€250 secondhand",
+        "quantity": "1",
+        "photo": "assets/images/image_row4_image21.jpg",
+        "description_md": "- 7 speed internal shifting hub\n- Rear tube and tire replaced in 2026\n- Some paint has been repainted\n- Two chain locks included"
+      }
+    ]
+  },
+  {
+    "category": "furniture",
+    "items": [
+      {
+        "name": "sofa IKEA BÅRSLÖV",
+        "size": "2360x1530x900",
+        "price": "100.0",
+        "original_price": "649",
+        "quantity": "1",
+        "photo": "assets/images/image_row6_image16.jpg",
+        "description_md": "- Turns into a bed\n- Separates into pieces\n- Can probably be built as a 2-seater"
+      },
+      {
+        "name": "table dining IKEA NORRÅKER",
+        "size": "2200x800x740",
+        "price": "10.0",
+        "original_price": "240",
+        "quantity": "1",
+        "photo": "assets/images/image_row7_image26.jpg",
+        "description_md": "- Solid wood\n- Top is damaged and ugly"
+      },
+      {
+        "name": "chairs dining IKEA JANINGE",
+        "size": "500x460x760",
+        "price": "5.0",
+        "original_price": "36",
+        "quantity": "4",
+        "photo": "assets/images/image_row8_image13.jpg",
+        "description_md": "- Can be used outdoors"
+      },
+      {
+        "name": "table, coffee or side",
+        "size": "",
+        "price": "10.0",
+        "original_price": "priceless",
+        "quantity": "2",
+        "photo": "assets/images/image_row9_image14.jpg",
+        "description_md": "- Top is wired glass\n- Structure is unfinished solid fir\n- One or two small cracks in the glass"
+      },
+      {
+        "name": "table, bedside",
+        "size": "",
+        "price": "5.0",
+        "original_price": "priceless",
+        "quantity": "2",
+        "photo": "assets/images/image_row10_image23.jpg",
+        "description_md": "- Solid unfinished fir\n- Can be disassembled in a pinch"
+      },
+      {
+        "name": "bed",
+        "size": "2130x1530x660",
+        "price": "30.0",
+        "original_price": "priceless",
+        "quantity": "1",
+        "photo": "assets/images/image_row11_image18.jpg",
+        "description_md": "- Solid unfinished fir\n- Can be disassembled\n- Inside dimension is 2000x1400\n- Includes two clip-on reading lights\n- Includes mattress, if you want it"
+      },
+      {
+        "name": "storage cabinet with bins/drawers IKEA TROFAST",
+        "size": "440x300x910",
+        "price": "10.0",
+        "original_price": "59",
+        "quantity": "4",
+        "photo": "assets/images/image_row12_image1.jpg",
+        "description_md": "- Solid pine\n- Includes various plastic bins to use as drawers\n- Used as pantry and dresser"
+      },
+      {
+        "name": "glass-top desk IKEA LERBERG",
+        "size": "approx 1000x500x700",
+        "price": "0",
+        "original_price": "?",
+        "quantity": "1",
+        "photo": "assets/images/image_row13_image3.jpg",
+        "description_md": "- Glass top does not attach to legs, just sits on top"
+      },
+      {
+        "name": "glass-top table IKEA GALANT",
+        "size": "approx 800x1600x600–900",
+        "price": "0",
+        "original_price": "?",
+        "quantity": "1",
+        "photo": "assets/images/image_row14_image22.jpg",
+        "description_md": "- White glass top durable but scratched up\n- Height is adjustable up to 900 mm\n- Extra homemade height boosting feet are available to fit TROFAST underneath"
+      },
+      {
+        "name": "chair",
+        "size": "",
+        "price": "0",
+        "original_price": "priceless",
+        "quantity": "1",
+        "photo": "assets/images/image_row15_image9.jpg",
+        "description_md": "- Solid unfinished fir\n- One-off prototype"
+      },
+      {
+        "name": "air beds",
+        "size": "940x1980x460",
+        "price": "5.0",
+        "original_price": "35",
+        "quantity": "2",
+        "photo": "assets/images/image_row16_image19.jpg",
+        "description_md": "- Electric pump built in"
+      }
+    ]
+  },
+  {
+    "category": "electric/electronic",
+    "items": [
+      {
+        "name": "hand mixer",
+        "size": "",
+        "price": "5.0",
+        "original_price": "23",
+        "quantity": "",
+        "photo": "assets/images/image_row18_image4.jpg",
+        "description_md": ""
+      },
+      {
+        "name": "toaster",
+        "size": "",
+        "price": "5.0",
+        "original_price": "40",
+        "quantity": "1",
+        "photo": "assets/images/image_row19_image7.jpg",
+        "description_md": ""
+      },
+      {
+        "name": "immersion blender",
+        "size": "",
+        "price": "5.0",
+        "original_price": "25",
+        "quantity": "1",
+        "photo": "assets/images/image_row20_image11.jpg",
+        "description_md": ""
+      },
+      {
+        "name": "computer screen",
+        "size": "27 inch",
+        "price": "30.0",
+        "original_price": "99",
+        "quantity": "1",
+        "photo": "assets/images/image_row21_image12.jpg",
+        "description_md": "- One USB-C cable (included) charges laptop and carries video\n- Also has HDMI port\n- Box included"
+      },
+      {
+        "name": "microwave oven IKEA TILLREDA",
+        "size": "440x340x260",
+        "price": "20.0",
+        "original_price": "57",
+        "quantity": "1",
+        "photo": "assets/images/image_row22_image2.jpg",
+        "description_md": "- Bell, not beep\n- Knobs, not buttons\n- Turntable\n- Box included"
+      },
+      {
+        "name": "piano",
+        "size": "",
+        "price": "100.0",
+        "original_price": "399",
+        "quantity": "",
+        "photo": "assets/images/image_row23_image8.jpg",
+        "description_md": "- Stand and soft travel case included"
+      },
+      {
+        "name": "bluetooth speaker IKEA VAPPEBY",
+        "size": "200x80x200",
+        "price": "30.0",
+        "original_price": "70",
+        "quantity": "1",
+        "photo": "assets/images/image_row24_image25.jpg",
+        "description_md": "- Includes optional ENEBY battery inside\n- Mains powered by default"
+      },
+      {
+        "name": "coffee grinder, electric wall mount",
+        "size": "",
+        "price": "10.0",
+        "original_price": "?",
+        "quantity": "1",
+        "photo": "assets/images/image_row25_image20.jpg",
+        "description_md": "- Vintage model, but used for the first time in 2025\n- Box included"
+      },
+      {
+        "name": "foot massager",
+        "size": "",
+        "price": "0",
+        "original_price": "?",
+        "quantity": "1",
+        "photo": "assets/images/image_row26_image15.jpg",
+        "description_md": "- Has cat hair on it\n- Does heat, pressure, and kneading separately"
+      },
+      {
+        "name": "hair dryer",
+        "size": "",
+        "price": "0",
+        "original_price": "23",
+        "quantity": "1",
+        "photo": "assets/images/image_row27_image5.jpg",
+        "description_md": "- Includes regular nozzle and diffuser"
+      },
+      {
+        "name": "lamp",
+        "size": "",
+        "price": "0",
+        "original_price": "15",
+        "quantity": "1",
+        "photo": "assets/images/image_row28_image10.jpg",
+        "description_md": "- Yellow"
+      },
+      {
+        "name": "fan",
+        "size": "",
+        "price": "5.0",
+        "original_price": "37",
+        "quantity": "1",
+        "photo": "assets/images/image_row29_image6.jpg",
+        "description_md": "- Green\n- 2 speeds"
+      },
+      {
+        "name": "cat feeding machine Petlibro Granary",
+        "size": "",
+        "price": "20.0",
+        "original_price": "80",
+        "quantity": "1",
+        "photo": "assets/images/image_row30_image24.jpg",
+        "description_md": "- No wifi, no app, no camera\n- Mains/USB powered with battery backup"
+      }
+    ]
+  },
+  {
+    "category": "other random household goods (gratis)",
+    "items": [
+      {
+        "name": "knives and cutting boards",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "dishes",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "cups and mugs",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "spices",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "step-can wastebasket",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "broom",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "bowls",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "pots and pans",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "oven dishes",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "food storage containers",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "plants",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "kitchen tools",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "kitchen towels and rags",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "blankets, sheets, linens",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "bath towels",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": ">0",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "Hot water bottle with cover",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": "1",
+        "photo": "",
+        "description_md": ""
+      }
+    ]
+  }
+]

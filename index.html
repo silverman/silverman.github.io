@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Household items available in Delft</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="py-4 bg-light mb-4">
+      <div class="container">
+        <h1 class="mb-0">Household items available in Delft</h1>
+        <ul class="text-muted mb-0">
+          <li>To buy or claim an item, WhatsApp, iMessage, or email Tim</li>
+          <li>Starting 25 Jul 2026, most things can be picked up in Delft binnenstad</li>
+          <li>If Qty is 0, the thing is probably claimed</li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container mb-5">
+      <section class="mb-5">
+        <div id="household-container">
+          <!-- categories loaded from data/household_grouped.json -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 bg-light">
+      <div class="container text-center small text-muted">© 2026 Product Catalog</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Image preview modal -->
+    <div class="modal fade" id="imgPreviewModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body text-center p-3">
+            <button type="button" class="btn-close position-absolute end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+            <img id="imgPreviewModalImg" src="" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Load grouped household JSON and render categories + cards (no View buttons)
+      fetch('data/household_grouped.json')
+        .then(r => r.json())
+        .then(groups => {
+          const container = document.getElementById('household-container');
+          // Format price strings: prefix € where missing and convert numbers to integers
+          function formatPriceString(s) {
+            if (!s && s !== 0) return '';
+            s = String(s).trim();
+            if (!s) return '';
+            if (s.includes('€')) return s;
+            // find first numeric token
+            const m = s.match(/-?\d+(?:\.\d+)?/);
+            if (m) {
+              const num = Math.round(parseFloat(m[0]));
+              return s.replace(m[0], '€' + String(num));
+            }
+            // fallback: try to parse the whole string
+            const n = parseFloat(s);
+            if (!isNaN(n)) return '€' + String(Math.round(n));
+            return s;
+          }
+          if (!container) return;
+          groups.forEach(group => {
+            const section = document.createElement('section');
+            section.className = 'mb-4';
+            const h3 = document.createElement('h3');
+            h3.textContent = group.category;
+            section.appendChild(h3);
+
+            const grid = document.createElement('div');
+            grid.className = 'row row-cols-1 row-cols-md-3 g-4';
+
+            group.items.forEach(it => {
+              const col = document.createElement('div'); col.className = 'col';
+              const card = document.createElement('div'); card.className = 'card h-100';
+
+              if (it.photo && it.photo.length) {
+                const img = document.createElement('img'); img.className = 'card-img-top img-clickable'; img.alt = it.name || '';
+                img.loading = 'lazy';
+                img.src = it.photo;
+                // click to open modal (show uncropped image)
+                img.style.cursor = 'zoom-in';
+                img.addEventListener('click', () => {
+                  const modalImg = document.getElementById('imgPreviewModalImg');
+                  modalImg.src = it.photo;
+                  modalImg.alt = it.name || '';
+                  const modalEl = document.getElementById('imgPreviewModal');
+                  const modal = new bootstrap.Modal(modalEl);
+                  modal.show();
+                });
+                card.appendChild(img);
+              }
+
+              const body = document.createElement('div'); body.className = 'card-body';
+              const h5 = document.createElement('h5'); h5.className = 'card-title'; h5.textContent = it.name || '';
+              body.appendChild(h5);
+
+              // Show size when available
+              if (it.size && String(it.size).trim()) {
+                const sz = document.createElement('div');
+                sz.className = 'text-muted small mb-2';
+                sz.textContent = 'Size: ' + String(it.size).trim();
+                body.appendChild(sz);
+              }
+
+              const priceDiv = document.createElement('div'); priceDiv.className = 'mb-2';
+              if (it.price) { const sp = document.createElement('span'); sp.className = 'fw-bold text-success'; sp.textContent = formatPriceString(it.price); priceDiv.appendChild(sp); }
+              const origRaw = it.original_price || '';
+              if (origRaw && String(origRaw).trim() !== '?') {
+                const so = document.createElement('span'); so.className = 'text-muted text-decoration-line-through ms-2'; so.textContent = formatPriceString(origRaw); priceDiv.appendChild(so);
+              }
+              if (it.quantity) { const sq = document.createElement('span'); sq.className = 'badge bg-secondary ms-2'; sq.textContent = 'Qty: ' + it.quantity; priceDiv.appendChild(sq); }
+              body.appendChild(priceDiv);
+
+              if (it.description_md) {
+                const ul = document.createElement('ul'); ul.className = 'mb-3';
+                it.description_md.split('\n').forEach(line => {
+                  const t = line.replace(/^[-\s]+/, '').trim();
+                  if (t) { const li = document.createElement('li'); li.textContent = t; ul.appendChild(li); }
+                });
+                body.appendChild(ul);
+              }
+
+              card.appendChild(body);
+              col.appendChild(card);
+              grid.appendChild(col);
+            });
+
+            section.appendChild(grid);
+            container.appendChild(section);
+          });
+        })
+        .catch(err => console.error('Failed to load grouped household data', err));
+    </script>
+  </body>
+</html>
