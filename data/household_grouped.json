@@ -152,7 +152,7 @@
         "size": "27 inch",
         "price": "30.0",
         "original_price": "99",
-        "quantity": "1",
+        "quantity": "0",
         "photo": "assets/images/image_row21_image12.jpg",
         "description_md": "- One USB-C cable (included) charges laptop and carries video\n- Also has HDMI port\n- Box included"
       },
@@ -378,7 +378,26 @@
         "description_md": ""
       },
       {
-        "name": "Hot water bottle with cover",
+        "name": "hot water bottle with cover",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": "1",
+        "photo": "",
+        "description_md": ""
+      },
+      {
+        "name": "yoga mat",
+        "size": "",
+        "price": "0",
+        "original_price": "",
+        "quantity": "2",
+        "photo": "",
+        "description_md": ""
+      },
+      ,
+      {
+        "name": "hot water bottle with cover",
         "size": "",
         "price": "0",
         "original_price": "",
