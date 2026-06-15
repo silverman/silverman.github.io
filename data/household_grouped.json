@@ -21,7 +21,7 @@
         "size": "2360x1530x900",
         "price": "100.0",
         "original_price": "649",
-        "quantity": "1",
+        "quantity": "0",
         "photo": "assets/images/image_row6_image16.jpg",
         "description_md": "- Turns into a bed\n- Separates into pieces\n- Can probably be built as a 2-seater"
       },
@@ -30,7 +30,7 @@
         "size": "2200x800x740",
         "price": "10.0",
         "original_price": "240",
-        "quantity": "1",
+        "quantity": "0",
         "photo": "assets/images/image_row7_image26.jpg",
         "description_md": "- Solid wood\n- Top is damaged and ugly"
       },
@@ -75,7 +75,7 @@
         "size": "440x300x910",
         "price": "10.0",
         "original_price": "59",
-        "quantity": "4",
+        "quantity": "2",
         "photo": "assets/images/image_row12_image1.jpg",
         "description_md": "- Solid pine\n- Includes various plastic bins to use as drawers\n- Used as pantry and dresser"
       },
@@ -111,7 +111,7 @@
         "size": "940x1980x460",
         "price": "5.0",
         "original_price": "35",
-        "quantity": "2",
+        "quantity": "0",
         "photo": "assets/images/image_row16_image19.jpg",
         "description_md": "- Electric pump built in"
       }
@@ -134,7 +134,7 @@
         "size": "",
         "price": "5.0",
         "original_price": "40",
-        "quantity": "1",
+        "quantity": "0",
         "photo": "assets/images/image_row19_image7.jpg",
         "description_md": ""
       },
@@ -170,7 +170,7 @@
         "size": "",
         "price": "100.0",
         "original_price": "399",
-        "quantity": "1",
+        "quantity": "0",
         "photo": "assets/images/image_row23_image8.jpg",
         "description_md": "- Stand and soft travel case included"
       },
@@ -206,7 +206,7 @@
         "size": "",
         "price": "0",
         "original_price": "23",
-        "quantity": "1",
+        "quantity": "0",
         "photo": "assets/images/image_row27_image5.jpg",
         "description_md": "- Includes regular nozzle and diffuser"
       },
@@ -215,7 +215,7 @@
         "size": "",
         "price": "0",
         "original_price": "15",
-        "quantity": "1",
+        "quantity": "0",
         "photo": "assets/images/image_row28_image10.jpg",
         "description_md": "- Yellow"
       },
@@ -224,7 +224,7 @@
         "size": "",
         "price": "5.0",
         "original_price": "37",
-        "quantity": "1",
+        "quantity": "0",
         "photo": "assets/images/image_row29_image6.jpg",
         "description_md": "- Green\n- 2 speeds"
       },
