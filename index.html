@@ -13,8 +13,7 @@
         <h1 class="mb-0">Household items available in Delft</h1>
         <ul class="text-muted mb-0">
           <li>To buy or claim an item, WhatsApp, iMessage, or email Tim</li>
-          <li>Starting 25 Jul 2026, most things can be picked up in Delft binnenstad</li>
-          <li>Everything must be gone before 31 Jul 2026</li>
+          <li>Pickup is possible from 25 Jul through 30 Jul.</li>
           <li>If Qty is 0, the thing is probably claimed, but you can ask to be a backup</li>
         </ul>
       </div>
@@ -40,8 +39,22 @@
         </div>
       </div>
     </div>
+
+    <!-- Message modal -->
+    <div class="modal fade" id="textModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="textModalTitle" class="modal-title"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="textModalBody"></div>
+        </div>
+      </div>
+    </div>
+
     <script>
-      // Load grouped household JSON and render categories + cards (no View buttons)
+      // Load grouped household JSON and render categories + cards (adds action buttons)
       fetch('data/household_grouped.json')
         .then(r => r.json())
         .then(groups => {
@@ -52,16 +65,20 @@
             s = String(s).trim();
             if (!s) return '';
             if (s.includes('€')) return s;
-            // find first numeric token
             const m = s.match(/-?\d+(?:\.\d+)?/);
             if (m) {
               const num = Math.round(parseFloat(m[0]));
               return s.replace(m[0], '€' + String(num));
             }
-            // fallback: try to parse the whole string
             const n = parseFloat(s);
             if (!isNaN(n)) return '€' + String(Math.round(n));
             return s;
+          }
+          function isQuantityZero(value) {
+            const text = String(value ?? '').trim();
+            if (!text) return true;
+            const num = Number(text);
+            return !Number.isNaN(num) && num === 0;
           }
           if (!container) return;
           groups.forEach(group => {
@@ -96,8 +113,33 @@
               }
 
               const body = document.createElement('div'); body.className = 'card-body';
-              const h5 = document.createElement('h5'); h5.className = 'card-title'; h5.textContent = it.name || '';
-              body.appendChild(h5);
+              const titleRow = document.createElement('div');
+              titleRow.className = 'd-flex align-items-start justify-content-between gap-2 mb-2';
+              const h5 = document.createElement('h5'); h5.className = 'card-title mb-0'; h5.textContent = it.name || '';
+              titleRow.appendChild(h5);
+
+              const btn = document.createElement('button'); btn.type = 'button';
+              const isZeroQty = isQuantityZero(it.quantity);
+              if (isZeroQty) {
+                btn.className = 'btn btn-warning btn-sm flex-shrink-0';
+                btn.textContent = 'join waitlist';
+                btn.dataset.msg = 'Someone already reserved this item, but they may cancel. If you want to be a backup, contact Tim with the name of the item.';
+              } else {
+                btn.className = 'btn btn-success btn-sm flex-shrink-0';
+                btn.textContent = 'reserve item';
+                btn.dataset.msg = 'To reserve this, contact Tim with the name of the item.';
+              }
+              btn.addEventListener('click', () => {
+                const titleEl = document.getElementById('textModalTitle');
+                const bodyEl = document.getElementById('textModalBody');
+                titleEl.textContent = it.name || '';
+                bodyEl.textContent = btn.dataset.msg;
+                const modalEl = document.getElementById('textModal');
+                const modal = new bootstrap.Modal(modalEl);
+                modal.show();
+              });
+              titleRow.appendChild(btn);
+              body.appendChild(titleRow);
 
               // Show size when available
               if (it.size && String(it.size).trim()) {
